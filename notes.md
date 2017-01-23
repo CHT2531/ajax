@@ -122,7 +122,7 @@ This looks similar to the way which we would structure object literals but there
 
 See http://stackoverflow.com/questions/2904131/what-is-the-difference-between-json-and-object-literal-notation for a good discussion of the differences.
 
-##Working with JSON data
+##Converting JSON data
 If we load a JSON file, the browser will treat this as text, as a single string. Usually we want to convert this JSON data into JavaScript data structures, arrays and objects. To do this we use the JSON.parse function. In this example it converts the JSON string into an array of JavaScript objects. 
 
 ```javascript
@@ -289,9 +289,9 @@ makeRequest("actors.json", showActors);
 
 ```
 ##Promises
-One problme we can run into with callbacks is lots of nested calls. For example, if in my *showFilms* function I made further Ajax requests, we end up with callbacks within callbacks and the code becomes untidy and difficult to maintain. 
+One problem we can run into with callbacks is lots of nested calls. For example, if in my *showFilms* function I made further Ajax requests, we end up with callbacks within callbacks and the code becomes untidy and difficult to maintain. 
 
-A new feature in ES6, is the idea of promises (see http://caniuse.com/#feat=promises for support info). Promises offer a different way of dealing with asynchronous code. 
+A new feature in ES2015, is the idea of promises (see http://caniuse.com/#feat=promises for support info). Promises offer a different way of dealing with asynchronous code. 
 
 Here's a really simple (and pointless example)
 
@@ -322,7 +322,7 @@ var simplePromise=doStuff();
 simplePromise.then(successFnc,errorFnc); // outputs success
 
 ```
-When you first see them, promises are confusing. The idea is that when we call a function it returns a promise object. The promise object runs some asynchronous code. Depending on the result of this code the Promise object either calls *resolve* or *reject*. The way in which we assign the *resolve* and *reject* function is throuhg the Promise object's *then* method. Here's an Ajax example
+When you first see them, promises are confusing. The idea is that when we call a function it returns a promise object. The promise object runs some asynchronous code. Depending on the result of this code the Promise object either calls *resolve* or *reject*. The way in which we assign the *resolve* and *reject* function is through the Promise object's *then* method. Here's an Ajax example
 
 ```javascript
 
