@@ -8,27 +8,27 @@ As an example, imagine we have a simple text file *data.txt* that contains the f
 Hello from Ajax
 ```
 
-Using Ajax we can load the text in this file and use it in our applications.Here's the JavaScript code for a simple Ajax request. There's quite a lot to take in but the code is more or less the same everytime we want to make an Ajax request.
+Using Ajax we can load the text in this file and use it in our applications. Here's the JavaScript code for a simple Ajax request. There's quite a lot to take in but the code is more or less the same everytime we want to make an Ajax request.
 
 ```javascript
-//I want to 'talk' to the web server
-var ajaxRequest = new XMLHttpRequest(); 
-
-//I want to request the file 'data.txt', but don't send the request yet.
-ajaxRequest.open('GET', 'data.txt', true);
 
 //declare a function
 var handleResponse=function()
 {
-    //did we find the requested resource?
+    //have we got a response from the server
     if(ajaxRequest.readyState===4){
-        //has all the data loaded?
+        //did we find the requested resource?
         if(ajaxRequest.status===200){
             console.log(ajaxRequest.responseText); //outputs Hello from Ajax
         }
     }
     
 }
+//I want to 'talk' to the web server
+var ajaxRequest = new XMLHttpRequest(); 
+
+//I want to request the file 'data.txt', but don't send the request yet.
+ajaxRequest.open('GET', 'data.txt', true);
 
 //when the server responds call the function handleResponse() 
 ajaxRequest.onreadystatechange=handleResponse; 
@@ -57,11 +57,11 @@ if(ajaxRequest.readyState===4)
 ### What if there's a problem
 When we request resources from web servers, things can go wrong. For example, a 404 error means the resource couldn't be found. There are lots of these *response* codes. A response code of 200 that means the request was successful. So that's why we check for a response code of 200
 ```javascript
-
-    //successful response?
+ 
+    //have we got a response from the server
     if(ajaxRequest.readyState===4)
     {
-        //has all the data loaded?
+       //successful response?
         if(ajaxRequest.status===200)
         {
             console.log(ajaxRequest.responseText); //outputs Hello from Ajax
@@ -155,7 +155,7 @@ loadFilms();
 loadActors();
 
 ```
-Clearly this isn't a good idea (the DRY principle). We have huge amounts of duplicate code. 
+Clearly this isn't a good idea (remember the DRY principle). We have huge amounts of duplicate code. 
 
 ### Using an argument to specify the URL
 One way to make this more efficient would be to use an argument that specifies the URL of the resource we want to request. Now when we call *makeRequest* we pass the url of the resource we are requesting. 
@@ -304,10 +304,16 @@ var makeRequest=function(url)
     })
 }
 
-var displayResults=function(films)
+var displayFilmsResults=function(films)
 {
     films.forEach(function(film){
         console.log(film.title);
+    })
+}
+var displayActorsResults=function(actors)
+{
+    actors.forEach(function(actor){
+        console.log(actor.name);
     })
 }
 var ajaxError=function(errMsg)
@@ -315,8 +321,10 @@ var ajaxError=function(errMsg)
     console.log(errMsg);
 }
 var myPromise=makeRequest("films.json");
-myPromise.then(displayResults,ajaxError);
+myPromise.then(displayFilmsResults,ajaxError);
 
+var anotherPromise=makeRequest("actors.json");
+anotherPromise.then(displayActorsResults,ajaxError);
 ```
 
 ## Reading/References
