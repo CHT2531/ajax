@@ -16,12 +16,11 @@ ajaxRequest.open('GET', "data/data.txt", true);
 ajaxRequest.send(null);
 
 
-//Q2) At the moment the function loads a simple text file. From the data folder, from the data folder open students.json. Modify your ajax function so that it loads the student data instead. Output the name of the first student in the console.
+//Q2) At the moment the function loads a simple text file. From the data folder open students.json. Modify your ajax function so that it loads the student data instead. Output the name of the first student in the console.
 
 //Q3) Edit the JSON file to add another student. Modify your JavaScript code so that you output the new student's name instead.
 
-//Q4)Modify this so that you use a loop to display the names of all the students and their marks in the console. 
-
+//Q4)Modify this so that you use a forEach loop to display the names of all the students and their marks in the console. 
 
 /*
 Q5)Modify this so that the names of all the students and their marks are displayed in the <ul> element in the HTML page i.e. the output when loading students.json will be
@@ -35,11 +34,11 @@ Q5)Modify this so that the names of all the students and their marks are display
 
 */
 
-
 //Q6) Instead of working with a hard coded JSON file, have a look at the itunes search API https://affiliate.itunes.apple.com/resources/documentation/itunes-store-web-service-search-api/ see if you can make a request and display the result in the console e.g.  https://itunes.apple.com/search?term=jaws&entity=movie should return films with the word 'jaws' in their title. To start with simply display the result in the console. Once you've got this to work, output the results to the HTML page like you did in the previous example. 
 
 //Q7) Modify the request so that you get some different data back e.g. about a music artist. 
 
+//The next set of exercises require a solid understanding of functions and functional programming in JavaScript. If you aren't familiar with the idea of functional programming, please look back at the work from week 5, before attempting the following. 
 
 //Q8) Now we will think about how to make the Ajax code a bit more re-usable. Wrap your code in a function. Call the function 'ajax'. Uncomment the following code to test it still works. 
 
