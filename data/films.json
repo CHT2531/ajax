@@ -1,0 +1,26 @@
+[
+	{
+		"title":"Jaws",
+		"year":1975,
+		"genres":["thriller"],
+		"duration":124
+	},
+	{
+		"title":"Get Out",
+		"year":2017,
+		"genres":["horror"],
+		"duration":117
+	},
+	{
+		"title":"Winter's Bone",
+		"year":2010,
+		"genres":["mystery","drama"],
+		"duration":100
+	},
+	{
+		"title":"The Incredibles", 
+		"year":2004,
+		"genres":["animated","superhero","comedy"],
+		"duration":115
+	}
+]

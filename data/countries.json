@@ -1,0 +1,5 @@
+[
+    {"name" : "England", "capital" : "London", "continent" : "Europe", "population": 53000000},
+    {"name" : "France", "capital" : "Paris", "continent" : "Europe", "population": 67000000},
+    {"name" : "USA", "capital" : "Washington", "continent" : "N. America", "population": 325000000}
+]
