@@ -1,4 +1,4 @@
-m# Instructions for running CHT2531 JavaScript Exercises
+# Instructions for running CHT2531 JavaScript Exercises
 
 1. Download or clone the repository.
 2. Unzip this.
@@ -16,7 +16,7 @@ There are a number of ways to do this.
 You can add extension to the chrome browser that will run a web server for you - https://chrome.google.com/webstore/detail/web-server-for-chrome/ofhbbkphhbklhfoeikjpcbhemlocgigb
 
 ### Using atom-live-web-server
-We can install a web server as an atom package. Similar 'packages' are available in other text editors e.g VS Code. 
+We can install a web server as an atom package. Similar 'packages' are available in other text editors e.g VS Code.
 * Open atom
 * Select file>Open folder and select this folder
 * Select file>settings>install
