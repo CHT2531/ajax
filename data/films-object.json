@@ -1,0 +1,23 @@
+{
+  "count":3,
+  "results":[
+    {
+      "title":"Jaws",
+      "year":1975,
+      "genres":["thriller","drama"],
+      "duration":124
+    },
+    {
+  	 "title":"Winter's Bone",
+  	 "year":2010,
+     "genres":["mystery","drama"],
+  	 "duration":100
+    },
+    {
+  	 "title":"Do The Right Thing",
+  	 "year":1989,
+     "genres":["comedy","drama"],
+  	 "duration":120
+    }
+  ]
+}

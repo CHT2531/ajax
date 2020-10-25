@@ -1,0 +1,20 @@
+[
+    {
+	     "title":"Winter's Bone",
+	     "year":2010,
+	     "genres":["mystery","drama"],
+	     "duration":100
+    },
+    {
+	    "title":"The Incredibles",
+	    "year":2004,
+	    "genres":["animated","superhero","comedy"],
+	    "duration":115
+    },
+    {
+  	 "title":"Do The Right Thing",
+  	 "year":1989,
+     "genres":["comedy","drama"],
+  	 "duration":120
+    }
+]
