@@ -22,7 +22,7 @@ fetch("./data/films.json").then(function(response) {
 
 // b) Modify the code so that the genres of Winter's Bone are displayed in the console.
 
-// c) Have a good look at the structure of the films-object.json. Add the details for another film. Modify the code so that the new film's details are displayed in the console.
+// c) Have a good look at the structure of films-object.json. Add the details for another film. Modify the code so that the new film's details are displayed in the console.
 
 
 
@@ -40,7 +40,7 @@ fetch("./data/films.json").then(function(response) {
 
 
 
-// Q5) Now think about how you can make the code more re-usable. //
+// Q5) Now think about how you can make the code more re-usable.
 //a) Create a new function, call it ajax. Put the fetch() code in this function. The ajax function should accept two arguments, a URL to request data from and a callback that will be executed when the data is returned. Have a look on the notes (in this repository) for an example.
 //b) Make multiple calls to your ajax function for the different examples we have looked at today e.g.
 
